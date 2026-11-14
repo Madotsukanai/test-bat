@@ -1,25 +1,23 @@
 @echo off
 rem ============================================================
-rem  エラーバンド
 rem  「U.N.オーエンは彼女なのか?」を Windows 標準のエラー音と
 rem  エラーダイアログで演奏する作品です。
 rem
 rem  これは非公式のファン作品です。
 rem  原曲: 「U.N.オーエンは彼女なのか?」
-rem    東方紅魔郷 ~ the Embodiment of Scarlet Devil より
+rem    東方紅魔郷 ～ the Embodiment of Scarlet Devil. より
 rem    作曲: ZUN (上海アリス幻樂団)
-rem  東方Projectは ZUN / 上海アリス幻樂団 の著作物です。
+rem    採譜: てすと
+rem  東方ProjectはZUN / 上海アリス幻樂団の著作物であり、
+rem  原曲の権利も同氏・同サークルに帰属しています。
 rem  本作品は、原作者とは一切関係がなく、公認でもありません。
 rem  東方Projectの二次創作ガイドラインに従ってください。
 rem
-rem  動作内容: Windows のエラー音で曲を演奏し、画面上に無害な
+rem  動作内容: Windows のエラー音で曲を演奏し、画面上に
 rem  エラー風ダイアログを多数表示します。
 rem  ファイルの変更やネットワーク通信は行いません。
 rem  Esc キーでいつでも中断できます。
 rem  ウイルス対策ソフトに誤検知される場合があります。
-rem
-rem  採譜データの出典: (実際の出典を記入)
-rem  ライセンス: (記入)
 rem ============================================================
 set "SELF=%~f0"
 powershell -NoProfile -STA -ExecutionPolicy Bypass -Command "$t=[IO.File]::ReadAllText($env:SELF); $i=$t.LastIndexOf('#PS'+'BEGIN'); iex $t.Substring($i)"
